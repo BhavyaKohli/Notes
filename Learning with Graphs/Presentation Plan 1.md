@@ -9,14 +9,16 @@
 	3. workflow: training and inference steps
 	4. etc
 -  
-## What has been done
+## What we'll do
+### Reproduce what has been done
 Currently used on -
 	1. **Semi-supervised**: 
 		Basic citation networks: Cora, Citeseer, Pubmed (Node classification task)
 	2. **Full-supervised**: 
 		Open Graph Benchmark (OGB) datasets: ogbn-products, ogbn-proteins, ogbn-arxiv, and ogbl-collab (Node and Link classification tasks)
+		Fetching dataset takes  too long. 
 
-## What we plan on doing
+### How do we extend the paper (potentially)
 - Existing applications only include classification-type tasks, can we extend this method to link prediction
 	- Why it can work: from lectures, link prediction relies on the feature representation of nodes. With a better representation using augmented features, link prediction models could possibly perform better
 	- Link prediction is a method which finds applications in many other fields
