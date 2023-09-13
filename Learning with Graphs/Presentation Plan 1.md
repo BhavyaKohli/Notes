@@ -19,5 +19,5 @@ Currently used on -
 ## What we plan on doing
 - Existing applications only include classification-type tasks, can we extend this method to link prediction
 	- Why it can work: from lectures, link prediction relies on the feature representation of nodes. With a better representation using augmented features, link prediction models could possibly perform better
-	- Link prediction is a method which finds applications 
+	- Link prediction is a method which finds applications in many other fields
 - 
