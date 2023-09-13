@@ -17,14 +17,14 @@ https://proceedings.mlr.press/v162/liu22s/liu22s.pdf
 	* Node feature vector can be used as an input to generate extra feature vectors specific to this node (input-dependence)
 * Generative model used: Conditional VAE. $X_v$ is the "condition" (center node), and $X_u$ is the target distribution to be learnt (u = neighbours of v)
 * During training, supply $(X_v, X_v)$ and maximize ELBO (variational training)
-* During inference/generation, supply $X_v$ for a node v as the condition, sample from the latent space to get Xv'
+* During inference/generation, supply $X_v$ for a node v as the condition, sample from the latent space to get $\bar{X}_v$
 * How is the main GNN trained? Passes made using the generated features $\bar{X}_v$ are concatenated with the passes made using the original $X_v$ (equation 6). Note: concatenation done along second axis (first is nodes)
 * Alternatively, averaging can be done to not increase dimensionality 
 * Similar concatenation/averaging methods can be used for the different architectures (ex. GAT)
 ## Loss functions
 1. Supervised Loss ($\mathcal{L}_1$): 
 	* Standard crossentropy-type loss
-	* Zi's are the output of the final GNN using both Xv and Xv' as the inputs
+	* Zi's are the output of the final GNN using both $X_v$ and $\bar{X}_v$ as the inputs
 2. Consistency Regularized Loss ($\mathcal{L}_2$):
 	* Uses the "sharpening trick"
 	* "T is a hyperparameter which adjusts the ”temperature” of this categorical distribution. The sharpening trick can reduce the entropy of the predictions."

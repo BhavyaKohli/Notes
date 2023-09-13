@@ -1,2 +1,23 @@
-## What to include
-- Basic explanation of the paper, methods, loss used and its motivation, etc.
+# Official poster
+
+<img src="https://icml.cc/media/PosterPDFs/ICML%202022/6974ce5ac660610b44d9b9fed0ff9548.png?t=1657490665.5703084">
+# What to include
+## Basic stuff
+- Base explanation of the paper -  
+	1. method: benefits over normal methods, basic flow 
+	2. loss used: structure, motivation, about the optional consistency regularized loss
+	3. workflow: training and inference steps
+	4. etc
+-  
+## What has been done
+Currently used on -
+	1. **Semi-supervised**: 
+		Basic citation networks: Cora, Citeseer, Pubmed (Node classification task)
+	2. **Full-supervised**: 
+		Open Graph Benchmark (OGB) datasets: ogbn-products, ogbn-proteins, ogbn-arxiv, and ogbl-collab (Node and Link classification tasks)
+
+## What we plan on doing
+- Existing applications only include classification-type tasks, can we extend this method to link prediction
+	- Why it can work: from lectures, link prediction relies on the feature representation of nodes. With a better representation using augmented features, link prediction models could possibly perform better
+	- Link prediction is a method which finds applications 
+- 
