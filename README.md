@@ -1,2 +1,2 @@
 This repository contains collaborative notes written using Obsidian
-This  is from obsidian
+This is from obsidian
