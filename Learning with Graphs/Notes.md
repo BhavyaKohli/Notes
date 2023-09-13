@@ -37,9 +37,9 @@ Steps:
 	3. Optionally compute $\mathcal{L}_2$, get total loss $\mathcal{L} = \mathcal{L}_1 + \beta*\mathcal{L}_2$
 	4. Perform gradient descent
 3. (validation)
-	1. Regenerate X', compute validation performance (loss/accuracy) using this
+	1. Regenerate $\bar{X}$, compute validation performance (loss/accuracy) using this
 4. (inference)
-	1. Select X' with smallest val_loss or highest val_acc -----> ?
+	1. Select $\bar{X}$ with smallest val_loss or highest val_acc -----> ?
 	2. Choose this in the forward pass
 ### Complexity analysis
 * Pre-training: $O(|E|(F D + LD^2))$
