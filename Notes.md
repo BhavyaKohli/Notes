@@ -42,7 +42,7 @@ Steps:
 	1. Select X' with smallest val_loss or highest val_acc -----> ?
 	2. Choose this in the forward pass
 ### Complexity analysis
-* Pre-training: O(|E|(F D + LD^2))
-* GNN training: O(S|E|(F D + LD^2))
+* Pre-training: $O(|E|(F D + LD^2))$
+* GNN training: $O(S|E|(F D + LD^2))$
 
 Note: pre-training runs for <10 epochs, does not add too much overhead
