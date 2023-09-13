@@ -1,1 +1,1 @@
-HI, this is test 1
+This repository contains collaborative notes written using Obsidian
