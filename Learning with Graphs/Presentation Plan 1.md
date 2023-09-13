@@ -16,8 +16,7 @@ Currently used on -
 		Basic citation networks: Cora, Citeseer, Pubmed (Node classification task)
 	2. **Full-supervised**: 
 		Open Graph Benchmark (OGB) datasets: ogbn-products, ogbn-proteins, ogbn-arxiv, and ogbl-collab (Node and Link classification tasks)
-		Fetching dataset takes  too long. 
-
+		Note: Fetching the OGB datasets takes far too long, possibly due to a server limitation (downloads from http://snap.stanford.edu/ogb/data/nodeproppred/). Till we find possible alternatives, we will aim to reproduce the results only from the first part. 
 ### How do we extend the paper (potentially)
 - Existing applications only include classification-type tasks, can we extend this method to link prediction
 	- Why it can work: from lectures, link prediction relies on the feature representation of nodes. With a better representation using augmented features, link prediction models could possibly perform better
