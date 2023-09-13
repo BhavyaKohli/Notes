@@ -22,4 +22,6 @@ Currently used on -
 - Existing applications only include classification-type tasks, can we extend this method to link prediction
 	- Why it can work: from lectures, link prediction relies on the feature representation of nodes. With a better representation using augmented features, link prediction models could possibly perform better
 	- Link prediction is a method which finds applications in many other fields
+- Current implementation of the generative model uses $X_u$, which is one-hop neighbour information for node $v$, and learns the distribution of local information conditioned on $X_v$. This can be thought of as a probabilistic version of message passing. We could possibly extend this further to include information from two/three-hop neighbours. We will try to better formulate this problem to show if it is better to go beyond one-hop neighbours. (The authors have also expressed their interest in a similar direction in the conclusion section.)
+- Experiment with generative models other than CVAEs. Normalizing Flows, using autoregressive-model-like methods after appropriate conditioning (introduce directed-ness, choose neighbourhood which follows 1-directional parent relations), etc.
 - 

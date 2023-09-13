@@ -16,7 +16,7 @@ https://proceedings.mlr.press/v162/liu22s/liu22s.pdf
 	* Scalability and generalization: if a new node is added, there is no need to train a whole new network, since the big model contains generalized information which can be used
 	* Node feature vector can be used as an input to generate extra feature vectors specific to this node (input-dependence)
 * Generative model used: Conditional VAE. $X_v$ is the "condition" (center node), and $X_u$ is the target distribution to be learnt (u = neighbours of v)
-* During training, supply $(X_v, X_v)$ and maximize ELBO (variational training)
+* During training, supply $(X_v, X_u)$ and maximize ELBO (variational training)
 * During inference/generation, supply $X_v$ for a node v as the condition, sample from the latent space to get $\bar{X}_v$
 * How is the main GNN trained? Passes made using the generated features $\bar{X}_v$ are concatenated with the passes made using the original $X_v$ (equation 6). Note: concatenation done along second axis (first is nodes)
 * Alternatively, averaging can be done to not increase dimensionality 
