@@ -8,10 +8,13 @@ Two kinds of loss functions are used for training the composite model:
 $$\mathcal{L}_1=\frac{-1}{S}\sum_{s=1}^{S}\sum_{i\in K}{}Y_i\log Z_i^{(s)}$$
 * Standard crossentropy-type loss
 * $Z_i$'s are the output of the final GNN using both $X_v$ and $\bar{X}_v$ as the inputs
+* $K$ is the set of training labels
+* $S$ is the number of times augmented features $\bar{X}$ are generated
 #### Consistency Regularized Loss ($\mathcal{L}_2$):
-$$\mathcal{L}_2=\frac{1}{S}\sum_{s=1}^{S}\sum_{i=1}^{N} ||\bar{Z}_{i}'-Z_{i}^{(s)}||_2^2$$
-* Uses the "sharpening trick"
-* "T is a hyperparameter which adjusts the ”temperature” of this categorical distribution. The sharpening trick can reduce the entropy of the predictions."
+$$\mathcal{L}_2=\frac{1}{S}\sum_{s=1}^{S}\sum_{i=1}^{N} ||\bar{Z}_{i}'-Z_{i}^{(s)}||_{2}^{2}$$Where$$ \bar{Z}_{i}=\frac{1}{S}\sum_{s=1}^{S}Z_{i}^{(s)}\;\;,\;\;
+\bar{Z}_{i}'=\frac{(Z_{i})^\frac{1}{T}}{\sum_{c=1}^{C}(Z_{ic})^{\frac{1}{T}}}$$
+* This loss uses the "sharpening trick" defined in [3], which aims to minimize the entropy of predictions
+* $T$ is a hyperparameter which adjusts the temperature of this categorical distribution
 
 ## Training and Inference
 
@@ -31,3 +34,4 @@ The repository can be found at https://github.com/SongtaoLiu0823/LAGNN
 # References
 [1] Louis, Paul, Shweta Ann Jacob, and Amirali Salehi-Abari. "Simplifying Subgraph Representation Learning for Scalable Link Prediction." _arXiv preprint arXiv:2301.12562_ (2023).
 [2] Kwak, Heeyoung, and Hyunkyung Bae Kyomin Jung. "Subgraph representation learning with hard negative samples for inductive link prediction." _ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)_. IEEE, 2022.
+[3] Berthelot, David, et al. "Mixmatch: A holistic approach to semi-supervised learning." _Advances in neural information processing systems_ 32 (2019).
