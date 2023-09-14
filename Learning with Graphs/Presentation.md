@@ -1,7 +1,10 @@
 # Method
 ## General framework
-- 
-## Architecture
+- The generative model (CVAE) works independently from the main GNN, and is also trained separately, using just $A$ and $X$.
+- The final output of the GNN is obtained by either:
+	1. concatenating the forward pass computed for $X$ and $\bar{X}$ (Ex. forward pass for a GCN: $\sigma(\tilde{A}XW)$)
+	2. computing the forward pass on the average of $X$ and $\bar{X}$
+* Note: For more complex models such as the GAT, there are some additional steps are required before the concatenation or averaging step.
 ## Loss functions
 Two kinds of loss functions are used for training the composite model:
 #### Supervised Loss ($\mathcal{L}_{1}$):
@@ -16,8 +19,14 @@ $$\mathcal{L}_2=\frac{1}{S}\sum_{s=1}^{S}\sum_{i=1}^{N} ||\bar{Z}_{i}'-Z_{i}^{(s
 * This loss uses the "sharpening trick" defined in [3], which aims to minimize the entropy of predictions
 * $T$ is a hyperparameter which adjusts the temperature of this categorical distribution
 ## Training and Inference
-
-
+1. Training
+	- First, the generative model is trained using $A$ and $X$
+	- In each epoch, subsequently, $S$ samples of $\bar{X}$ are generated 
+	- Losses $\mathcal{L}_1$ (and optionally $\mathcal{L}_2$) are computed using the $S$ outputs, with a regularization weight $\alpha$ (hyperparameter)
+2. Validation
+	- For computing validation loss, $\bar{X}$ is generated again (post gradient descent) and then passed through the forward pass along with the original features $X$
+3. Testing/Inference
+	* The $\bar{X}$ with the best validation performance is chosen for the inference step using the trained NN
 # What we plan on doing with it
 1. Existing applications only include classification-type tasks, given the generalizability of the augmentation workflow, we can extend this method to edge level and graph level tasks.
 	* Why it can work: from lectures, link prediction relies on the feature representation of nodes. With a better representation using augmented features generated using this method, link prediction models could possibly show improved performance.
