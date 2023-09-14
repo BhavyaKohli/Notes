@@ -118,7 +118,7 @@ annotation-target: https://proceedings.mlr.press/v162/liu22s/liu22s.pdf
 
 >%%
 >```annotation-json
->{"created":"2023-09-14T03:36:01.181Z","updated":"2023-09-14T03:36:01.181Z","document":{"title":"liu22s.pdf","link":[{"href":"urn:x-pdf:f81c1515bb58f97cb697e7534062e60d"},{"href":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf"}],"documentFingerprint":"f81c1515bb58f97cb697e7534062e60d"},"uri":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","target":[{"source":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","selector":[{"type":"TextPositionSelector","start":5616,"end":5702},{"type":"TextQuoteSelector","exact":"promote the ag-gregation scheme with more generated samples in the lo-cal neighborhood","prefix":"Work. In this work, in order to ","suffix":", we propose a novel and efficie"}]}]}
+>{"created":"2023-09-14T03:36:01.181Z","updated":"2023-09-14T03:36:01.181Z","document":{"title":"liu22s.pdf","link":[{"href":"urn:x-pdf:f81c1515bb58f97cb697e7534062e60d"},{"href":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf"}],"documentFingerprint":"f81c1515bb58f97cb697e7534062e60d"},"uri":"hpttps://proceedings.mlr.press/v162/liu22s/liu22s.pdf","target":[{"source":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","selector":[{"type":"TextPositionSelector","start":5616,"end":5702},{"type":"TextQuoteSelector","exact":"promote the ag-gregation scheme with more generated samples in the lo-cal neighborhood","prefix":"Work. In this work, in order to ","suffix":", we propose a novel and efficie"}]}]}
 >```
 >%%
 >*%%PREFIX%%Work. In this work, in order to%%HIGHLIGHT%% ==promote the ag-gregation scheme with more generated samples in the lo-cal neighborhood== %%POSTFIX%%, we propose a novel and efficie*
