@@ -269,3 +269,47 @@ annotation-target: https://proceedings.mlr.press/v162/liu22s/liu22s.pdf
 >
 ^iu5g2z4enbe
 
+<<<<<<< HEAD
+=======
+
+>%%
+>```annotation-json
+>{"created":"2023-09-14T04:06:31.580Z","updated":"2023-09-14T04:06:31.580Z","document":{"title":"liu22s.pdf","link":[{"href":"urn:x-pdf:f81c1515bb58f97cb697e7534062e60d"},{"href":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf"}],"documentFingerprint":"f81c1515bb58f97cb697e7534062e60d"},"uri":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","target":[{"source":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","selector":[{"type":"TextPositionSelector","start":16863,"end":16864},{"type":"TextQuoteSelector","exact":".","prefix":"esecond dimension of W(1) of GCN","suffix":" For other architectures(LAGAT, "}]}]}
+>```
+>%%
+>*%%PREFIX%%esecond dimension of W(1) of GCN%%HIGHLIGHT%% ==.== %%POSTFIX%%For other architectures(LAGAT,*
+>%%LINK%%[[#^huh7tbm0ebq|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^huh7tbm0ebq
+
+
+>%%
+>```annotation-json
+>{"created":"2023-09-14T04:07:16.782Z","updated":"2023-09-14T04:07:16.782Z","document":{"title":"liu22s.pdf","link":[{"href":"urn:x-pdf:f81c1515bb58f97cb697e7534062e60d"},{"href":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf"}],"documentFingerprint":"f81c1515bb58f97cb697e7534062e60d"},"uri":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","target":[{"source":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","selector":[{"type":"TextPositionSelector","start":17177,"end":17282},{"type":"TextQuoteSelector","exact":"oncatenation-style design, we can alsoaverage X and X as input for GNNs and do not change thearchitecture","prefix":"and LAGCNII.In addition to the c","suffix":".LAGAT. Similarly, the first lay"}]}]}
+>```
+>%%
+>*%%PREFIX%%and LAGCNII.In addition to the c%%HIGHLIGHT%% ==oncatenation-style design, we can alsoaverage X and X as input for GNNs and do not change thearchitecture== %%POSTFIX%%.LAGAT. Similarly, the first lay*
+>%%LINK%%[[#^ej3u3vr29lh|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^ej3u3vr29lh
+
+
+>%%
+>```annotation-json
+>{"created":"2023-09-14T04:07:59.623Z","updated":"2023-09-14T04:07:59.623Z","document":{"title":"liu22s.pdf","link":[{"href":"urn:x-pdf:f81c1515bb58f97cb697e7534062e60d"},{"href":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf"}],"documentFingerprint":"f81c1515bb58f97cb697e7534062e60d"},"uri":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","target":[{"source":"https://proceedings.mlr.press/v162/liu22s/liu22s.pdf","selector":[{"type":"TextPositionSelector","start":17597,"end":17717},{"type":"TextQuoteSelector","exact":"We just replace the input of the halfof the attention heads with X. And we also provide theaverage-style design for GAT.","prefix":"ion of W(1)kis the same as GAT. ","suffix":"3.4. Loss FunctionsIn this secti"}]}]}
+>```
+>%%
+>*%%PREFIX%%ion of W(1)kis the same as GAT.%%HIGHLIGHT%% ==We just replace the input of the halfof the attention heads with X. And we also provide theaverage-style design for GAT.== %%POSTFIX%%3.4. Loss FunctionsIn this secti*
+>%%LINK%%[[#^746bw5lxsjs|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^746bw5lxsjs
+>>>>>>> origin/main

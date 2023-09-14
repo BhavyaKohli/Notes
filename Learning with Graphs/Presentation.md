@@ -19,11 +19,16 @@ $$\mathcal{L}_2=\frac{1}{S}\sum_{s=1}^{S}\sum_{i=1}^{N} ||\bar{Z}_{i}'-Z_{i}^{(s
 ## Training and Inference
 
 # What we plan on doing with it
-* Existing applications only include classification-type tasks, given the generalizability of the augmentation workflow, we can extend this method to link prediction
+* Existing applications only include classification-type tasks, given the generalisability of the augmentation workflow, we can extend this method to link prediction
 	* Why it can work: from lectures, link prediction relies on the feature representation of nodes. With a better representation using augmented features generated using this method, link prediction models could possibly show improved performance
-	* Link prediction is a a very base-level task, and has applications in many other tasks, such as subgraph representation learning [1], [2]
+	* Link prediction is a a very base-level task, and has applications in many other tasks, such as sub-graph representation learning [1], [2]
 * Additionally, the authors themselves suggest using the method on inductive learning tasks such as graph classification. We can evaluate its performance (after suitable tweaks to the training algorithm) on the standard molecule datasets (TU) to start with, and work towards applying it on larger datasets.
-- Current implementation of the generative model uses $X_u$, which is one-hop neighbour information for node $v$, and learns the distribution of local information conditioned on $X_v$. This can be thought of as a probabilistic version of message passing. We could possibly extend this further to include information from two/three-hop neighbours. We will try to better formulate this problem to show if it is better to go beyond one-hop neighbours. The authors have also expressed their interest in exploring a similar direction.
+- Current implementation of the generative model uses $X_u$, which is one-hop neighbour information for node $v$, and learns the distribution of local information conditioned on $X_v$. 
+	- This can be thought of as a probabilistic version of message passing.
+	- We see 2 potential ways to improve using this idea:
+	1. We could possibly extend this further to include information from two/three-hop neighbours. We will try to better formulate this problem to show if it is better to go beyond one-hop neighbours.
+	2. This generation is done once for each node and used as feature for that particular node. In regular GNNs, the message generation step is an identity mapping from node features to itself.
+		- Can we leverage this CVAE to generate a different message for each neighbour of a given node, which can break the symmetry even better? 
 - Experiment with generative models other than CVAEs. Normalizing Flows, using autoregressive-model-like methods after appropriate conditioning (introduce directed-ness, choose neighbourhood which follows 1-directional parent relations), etc.
 # Code
 The repository can be found at https://github.com/SongtaoLiu0823/LAGNN
